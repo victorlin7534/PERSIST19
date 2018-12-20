@@ -15,8 +15,8 @@ int main() {
     strtok(input,"\n");
     write(to_server,input,100);
     
-    char output[100];
-    read(from_server,output,100);
+    char output[strlen(input)];
+    read(from_server,output,strlen(input));
     printf("client: received <%s>\n",output);
   }
 }
